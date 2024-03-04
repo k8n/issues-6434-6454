@@ -4,7 +4,6 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class TeamUser extends Resource
@@ -21,7 +20,7 @@ class TeamUser extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'user';
 
     /**
      * The columns that should be searched.
@@ -29,7 +28,7 @@ class TeamUser extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'user','team',
     ];
 
     /**

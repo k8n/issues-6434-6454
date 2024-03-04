@@ -11,8 +11,10 @@ return new class extends Migration {
      */
     public function up(): void {
         Schema::create('team_user', function (Blueprint $table) {
+            $table->id();
             $table->foreignIdFor(\App\Models\User::class);
             $table->foreignIdFor(\App\Models\Team::class);
+            $table->timestamps();
         });
 
         TeamUser::query()->insert([
@@ -24,13 +26,13 @@ return new class extends Migration {
                 'team_id' => 0
             ], [
                 'user_id' => 3,
-                'team_id' => 2
+                'team_id' => 1
             ], [
                 'user_id' => 4,
-                'team_id' => 3
+                'team_id' => 2
             ], [
                 'user_id' => 5,
-                'team_id' => 4
+                'team_id' => 3
             ],
         ]);
     }

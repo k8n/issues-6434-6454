@@ -28,7 +28,7 @@ return new class extends Migration
                 'id'=> 2,
                 'name' => 'design'
             ],[
-                'id'=> 4,
+                'id'=> 3,
                 'name' => 'marketing'
             ],
         ]);
