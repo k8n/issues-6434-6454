@@ -41,7 +41,7 @@ class TeamUser extends Resource
     {
         return [
             BelongsTo::make('user'),
-            BelongsTo::make('team')
+            BelongsTo::make('team')->searchable()
         ];
     }
 
